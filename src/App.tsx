@@ -38,9 +38,15 @@ export function App() {
         <img src={images.banner} alt='banner' />
       </header>
       <section>
-        <div className='py-14 text-center'>
-          <h2 className='text-principal-negative font-medium uppercase leading-3'>principal</h2>
-          <span className='text-slate-400 text-sm'>Principais artes</span>
+        <div className='pt-14 text-center'>
+          <h2 className='text-principal-negative font-medium uppercase leading-3 text-xl'>coleções</h2>
+          <span className='text-sm text-slate-400'>Principais coleções</span>
+        </div>
+        <div className='ml-4 pt-14'>
+          <h2 className='text-principal-negative text-sm font-medium uppercase leading-3'>
+            dungeons & dungeons
+          </h2>
+          <span className='text-sm text-slate-400'>de onde vem...</span>
         </div>
         <aside className='flex max-md:flex-col'>
           <div className='flex max-md:flex'>
@@ -50,6 +56,22 @@ export function App() {
           <div className='flex max-md:flex'>
             <img src={images.principal_3} className='w-full' />
             <img src={images.principal_4} className='w-full' />
+          </div>
+        </aside>
+        <div className='ml-4 pt-14'>
+          <h2 className='text-principal-negative text-sm font-medium uppercase leading-3'>
+            arco-iris
+          </h2>
+          <span className='text-sm text-slate-400'>uma coleção mais que colorida</span>
+        </div>
+        <aside className='px-4'>
+          <div className='grid grid-cols-3 max-md:grid-cols-2 gap-2'>
+            <img src={images.colorized_1} className='w-full' />
+            <img src={images.colorized_2} className='w-full' />
+            <img src={images.colorized_3} className='w-full' />
+            <img src={images.colorized_4} className='w-full' />
+            <img src={images.colorized_5} className='w-full' />
+            <img src={images.colorized_6} className='w-full' />
           </div>
         </aside>
       </section>
