@@ -62,7 +62,7 @@ export function App() {
           <h2 className='text-principal-negative text-sm font-medium uppercase leading-3'>
             arco-iris
           </h2>
-          <span className='text-sm text-slate-400'>uma coleção mais que colorida</span>
+          <span className='text-sm text-slate-400'>Uma coleção mais que colorida</span>
         </div>
         <aside className='px-4'>
           <div className='grid grid-cols-3 max-md:grid-cols-2 gap-2'>
@@ -72,6 +72,19 @@ export function App() {
             <img src={images.colorized_4} className='w-full' />
             <img src={images.colorized_5} className='w-full' />
             <img src={images.colorized_6} className='w-full' />
+          </div>
+        </aside>
+        <div className='ml-4 pt-14'>
+          <h2 className='text-principal-negative text-sm font-medium uppercase leading-3'>
+            Vitral
+          </h2>
+          <span className='text-sm text-slate-400'>Expressões medievais</span>
+        </div>
+        <aside className='px-4'>
+          <div className='flex gap-2'>
+            <img src={images.strainedGlass_1} className='w-full' />
+            <img src={images.strainedGlass_2} className='w-full' />
+            <img src={images.strainedGlass_3} className='w-full' />
           </div>
         </aside>
       </section>
