@@ -1,5 +1,7 @@
 import { images } from './assets';
 import { Home, Images, Twitter, Mail } from 'lucide-react';
+import { SectionTitle } from './components/SectionTitle';
+import { ColectionTitle } from './components/ColectionTitle';
 export function App() {
   return (
     <div className='m-auto max-w-screen-xl'>
@@ -38,18 +40,8 @@ export function App() {
         <img src={images.banner} alt='banner' />
       </header>
       <section>
-        <div className='pt-14 text-center'>
-          <h2 className='text-xl font-medium uppercase leading-3 text-principal-negative'>
-            coleções
-          </h2>
-          <span className='text-sm text-slate-400'>Principais coleções</span>
-        </div>
-        <div className='ml-4 pt-14'>
-          <h2 className='text-sm font-medium uppercase leading-3 text-principal-negative'>
-            dungeons & dungeons
-          </h2>
-          <span className='text-sm text-slate-400'>de onde vem...</span>
-        </div>
+        <SectionTitle title='Coleções' subtitle='Coleções artisticas' />
+        <ColectionTitle title='Dragons & Dungeons' subtitle='De onde vem o ferro e o fogo'/>
         <aside className='flex max-md:flex-col'>
           <div className='flex max-md:flex'>
             <img src={images.principal_1} className='w-full' />
@@ -60,12 +52,7 @@ export function App() {
             <img src={images.principal_4} className='w-full' />
           </div>
         </aside>
-        <div className='ml-4 pt-14'>
-          <h2 className='text-sm font-medium uppercase leading-3 text-principal-negative'>
-            arco-iris
-          </h2>
-          <span className='text-sm text-slate-400'>Uma coleção mais que colorida</span>
-        </div>
+        <ColectionTitle title='Arco-Iris' subtitle='Mais que colorido'/>
         <aside className='px-4'>
           <div className='grid grid-cols-3 gap-2 max-md:grid-cols-2'>
             <img src={images.colorized_1} className='w-full' />
@@ -76,12 +63,7 @@ export function App() {
             <img src={images.colorized_6} className='w-full' />
           </div>
         </aside>
-        <div className='ml-4 pt-14'>
-          <h2 className='text-sm font-medium uppercase leading-3 text-principal-negative'>
-            Vitral
-          </h2>
-          <span className='text-sm text-slate-400'>Expressões medievais</span>
-        </div>
+        <ColectionTitle title='Vitral' subtitle='Ao estilo medieval'/>
         <aside className='px-4'>
           <div className='flex gap-2'>
             <img src={images.strainedGlass_1} className='w-full' />
@@ -91,10 +73,7 @@ export function App() {
         </aside>
       </section>
       <section>
-        <div className='py-14 text-center'>
-          <h2 className='text-xl font-medium uppercase leading-3 text-principal-negative'>Sobre</h2>
-          <span className='text-sm text-slate-400'>Um pouquinho sobre mim</span>
-        </div>
+        <SectionTitle title='Sobre' subtitle='Um pouquinho sobre mim' />
         <div className='m-auto w-fit'>
           <img
             src={images.profile}
@@ -117,12 +96,7 @@ export function App() {
         </div>
       </section>
       <section>
-        <div className='py-14 text-center'>
-          <h2 className='text-xl font-medium uppercase leading-3 text-principal-negative'>
-            Contato
-          </h2>
-          <span className='text-sm text-slate-400'>Entre em contato comigo</span>
-        </div>
+        <SectionTitle title='Contato' subtitle='Entre em contato comigo' />
       </section>
       <section className='mb-7 flex'>
         <a
@@ -142,7 +116,9 @@ export function App() {
         </a>
       </section>
       <footer className='py-6'>
-        <p className='text-center text-sm text-slate-400'>© 2024 Carimbo - Designed & Coded by Haku</p>
+        <p className='text-center text-sm text-slate-400'>
+          © 2024 Carimbo - Designed & Coded by Haku
+        </p>
       </footer>
     </div>
   );
