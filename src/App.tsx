@@ -2,12 +2,25 @@ import { images } from './assets';
 import { Home, Images, Twitter, Mail } from 'lucide-react';
 import { SectionTitle } from './components/SectionTitle';
 import { ColectionTitle } from './components/ColectionTitle';
+import { gsap } from 'gsap';
+import { useEffect } from 'react';
 
 export function App() {
+  useEffect(() => {
+    gsap.from('.banner', { delay: 3, opacity: 0, x: 100 });
+    gsap.to('.banner', { opacity: 1, delay: 3, x: 0, duration: 2.5, ease: 'power3.out' });
+
+    gsap.from('.nav', { delay: 2, opacity: 0, x: 100 });
+    gsap.to('.nav', { opacity: 1, delay: 2, x: 0, duration: 2.5, ease: 'power3.out' });
+
+    gsap.from('.principal', { delay: 4, opacity: 0, x: 100 });
+    gsap.to('.principal', { opacity: 1, delay: 4, x: 0, duration: 2.5, ease: 'power3.out' });
+  }, []);
+
   return (
-    <main className='m-auto max-w-screen-xl'>
-      <header>
-        <nav className='flex items-center justify-between px-4 py-4'>
+    <main className='m-auto max-w-screen-xl overflow-hidden'>
+      <header className='header'>
+        <nav className='nav flex items-center justify-between px-4 py-4'>
           <div className='flex gap-2'>
             <a
               href='#'
@@ -38,12 +51,12 @@ export function App() {
             </a>
           </div>
         </nav>
-        <img src={images.banner} alt='banner' className='w-full' />
+        <img src={images.banner} alt='banner' className='banner w-full' />
       </header>
       <section className='flex-col'>
         <SectionTitle title='Coleções' subtitle='Coleções artisticas' />
         <ColectionTitle title='Dragons & Dungeons' subtitle='De onde vem o ferro e o fogo' />
-        <aside className='grid grid-cols-2 max-md:grid-cols-1'>
+        <aside className='principal grid grid-cols-2 max-md:grid-cols-1'>
           <div className='grid grid-cols-2'>
             <img src={images.principal_1} alt='' />
             <img src={images.principal_2} alt='' />
@@ -99,7 +112,7 @@ export function App() {
         <a
           href='https://x.com/CarimboTinteiro'
           target='_blank'
-          className='grid py-20 w-full place-content-center bg-principal-negative text-principal-orange-200 transition duration-300 hover:bg-principal-purple'
+          className='grid w-full place-content-center bg-principal-negative py-20 text-principal-orange-200 transition duration-300 hover:bg-principal-purple'
         >
           <Twitter />
         </a>
@@ -107,7 +120,7 @@ export function App() {
         <a
           href='mailto:Carimbotint@gmail.com'
           target='_blank'
-          className='grid py-20 w-full place-content-center bg-principal-negative text-principal-orange-200 transition duration-300 hover:bg-principal-purple'
+          className='grid w-full place-content-center bg-principal-negative py-20 text-principal-orange-200 transition duration-300 hover:bg-principal-purple'
         >
           <Mail />
         </a>
