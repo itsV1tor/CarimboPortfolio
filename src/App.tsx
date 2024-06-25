@@ -2,9 +2,10 @@ import { images } from './assets';
 import { Home, Images, Twitter, Mail } from 'lucide-react';
 import { SectionTitle } from './components/SectionTitle';
 import { ColectionTitle } from './components/ColectionTitle';
+
 export function App() {
   return (
-    <div className='m-auto max-w-screen-xl'>
+    <main className='m-auto max-w-screen-xl'>
       <header>
         <nav className='flex items-center justify-between px-4 py-4'>
           <div className='flex gap-2'>
@@ -37,39 +38,35 @@ export function App() {
             </a>
           </div>
         </nav>
-        <img src={images.banner} alt='banner' />
+        <img src={images.banner} alt='banner' className='w-full' />
       </header>
-      <section>
+      <section className='flex-col'>
         <SectionTitle title='Coleções' subtitle='Coleções artisticas' />
-        <ColectionTitle title='Dragons & Dungeons' subtitle='De onde vem o ferro e o fogo'/>
-        <aside className='flex max-md:flex-col'>
-          <div className='flex max-md:flex'>
-            <img src={images.principal_1} className='w-full' />
-            <img src={images.principal_2} className='w-full' />
+        <ColectionTitle title='Dragons & Dungeons' subtitle='De onde vem o ferro e o fogo' />
+        <aside className='grid grid-cols-2 max-md:grid-cols-1'>
+          <div className='grid grid-cols-2'>
+            <img src={images.principal_1} alt='' />
+            <img src={images.principal_2} alt='' />
           </div>
-          <div className='flex max-md:flex'>
-            <img src={images.principal_3} className='w-full' />
-            <img src={images.principal_4} className='w-full' />
-          </div>
-        </aside>
-        <ColectionTitle title='Arco-Iris' subtitle='Mais que colorido'/>
-        <aside className='px-4'>
-          <div className='grid grid-cols-3 gap-2 max-md:grid-cols-2'>
-            <img src={images.colorized_1} className='w-full' />
-            <img src={images.colorized_2} className='w-full' />
-            <img src={images.colorized_3} className='w-full' />
-            <img src={images.colorized_4} className='w-full' />
-            <img src={images.colorized_5} className='w-full' />
-            <img src={images.colorized_6} className='w-full' />
+          <div className='grid grid-cols-2'>
+            <img src={images.principal_3} alt='' />
+            <img src={images.principal_4} alt='' />
           </div>
         </aside>
-        <ColectionTitle title='Vitral' subtitle='Ao estilo medieval'/>
-        <aside className='px-4'>
-          <div className='flex gap-2'>
-            <img src={images.strainedGlass_1} className='w-full' />
-            <img src={images.strainedGlass_2} className='w-full' />
-            <img src={images.strainedGlass_3} className='w-full' />
-          </div>
+        <ColectionTitle title='Arco-Iris' subtitle='Mais que colorido' />
+        <aside className='grid grid-cols-3 gap-2 px-4 max-md:grid-cols-2'>
+          <img src={images.colorized_1} />
+          <img src={images.colorized_2} />
+          <img src={images.colorized_3} />
+          <img src={images.colorized_4} />
+          <img src={images.colorized_5} />
+          <img src={images.colorized_6} />
+        </aside>
+        <ColectionTitle title='Vitral' subtitle='Ao estilo medieval' />
+        <aside className='grid grid-cols-3 gap-2 px-4'>
+          <img src={images.strainedGlass_1} />
+          <img src={images.strainedGlass_2} />
+          <img src={images.strainedGlass_3} />
         </aside>
       </section>
       <section>
@@ -85,24 +82,24 @@ export function App() {
             dar vida a ideias através de ilustrações vibrantes.
           </p>
         </div>
-        <div className='flex-col gap-16'>
-          <img src={images.sketch_1} alt='' className='w-full' />
-          <img src={images.sketch_2} alt='' className='w-full' />
-          <img src={images.sketch_3} alt='' className='w-full' />
-          <div className='flex'>
-            <img src={images.sketch_4} alt='' className='w-full' />
-            <img src={images.sketch_5} alt='' className='w-full' />
+        <div className='grid gap-2'>
+          <img src={images.sketch_1} />
+          <img src={images.sketch_2} />
+          <img src={images.sketch_3} />
+          <div className='grid grid-cols-2 gap-2'>
+            <img src={images.sketch_4} />
+            <img src={images.sketch_5} />
           </div>
         </div>
       </section>
       <section>
         <SectionTitle title='Contato' subtitle='Entre em contato comigo' />
       </section>
-      <section className='mb-7 flex'>
+      <section className='mb-7 grid gap-4'>
         <a
           href='https://x.com/CarimboTinteiro'
           target='_blank'
-          className='flex h-48 w-full items-center justify-center bg-principal-negative text-principal-orange-200 transition duration-300 hover:bg-principal-purple'
+          className='grid py-20 w-full place-content-center bg-principal-negative text-principal-orange-200 transition duration-300 hover:bg-principal-purple'
         >
           <Twitter />
         </a>
@@ -110,7 +107,7 @@ export function App() {
         <a
           href='mailto:Carimbotint@gmail.com'
           target='_blank'
-          className='flex h-48 w-full items-center justify-center bg-principal-negative text-principal-orange-200 transition duration-300 hover:bg-principal-purple'
+          className='grid py-20 w-full place-content-center bg-principal-negative text-principal-orange-200 transition duration-300 hover:bg-principal-purple'
         >
           <Mail />
         </a>
@@ -120,6 +117,6 @@ export function App() {
           © 2024 Carimbo - Designed & Coded by Haku
         </p>
       </footer>
-    </div>
+    </main>
   );
 }
