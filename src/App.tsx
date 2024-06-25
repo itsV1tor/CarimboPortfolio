@@ -58,22 +58,19 @@ export function App() {
         <ColectionTitle title='Dragons & Dungeons' subtitle='De onde vem o ferro e o fogo' />
         <aside className='principal grid grid-cols-2 max-md:grid-cols-1'>
           <div className='grid grid-cols-2'>
-            <img src={images.principal_1} alt='' />
-            <img src={images.principal_2} alt='' />
+            <img src={images.principal_1} alt='dungeons and dungeons image' />
+            <img src={images.principal_2} alt='dungeons and dungeons image' />
           </div>
           <div className='grid grid-cols-2'>
-            <img src={images.principal_3} alt='' />
-            <img src={images.principal_4} alt='' />
+            <img src={images.principal_3} alt='dungeons and dungeons image'/>
+            <img src={images.principal_4} alt='dungeons and dungeons image' />
           </div>
         </aside>
         <ColectionTitle title='Arco-Iris' subtitle='Mais que colorido' />
         <aside className='grid grid-cols-3 gap-2 px-4 max-md:grid-cols-2'>
-          <img src={images.colorized_1} />
-          <img src={images.colorized_2} />
-          <img src={images.colorized_3} />
-          <img src={images.colorized_4} />
-          <img src={images.colorized_5} />
-          <img src={images.colorized_6} />
+          {images.colorized.map((image) =>(
+            <img src={image} fetchPriority='high'/>
+          ))}
         </aside>
         <ColectionTitle title='Vitral' subtitle='Ao estilo medieval' />
         <aside className='grid grid-cols-3 gap-2 px-4'>
